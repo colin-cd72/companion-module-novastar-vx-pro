@@ -16,16 +16,16 @@ jobs:
         with:
           node-version: '22.x'
       - run: npm ci
+      - run: npm run check
       - run: npm run build
-      - name: Package tarball
+      - name: Locate tarball
+        id: locate
         run: |
-          VERSION="${GITHUB_REF_NAME#v}"
-          mkdir -p tmp/novastar-vx-pro
-          cp -r pkg/main.js pkg/companion pkg/package.json tmp/novastar-vx-pro/
-          (cd tmp && tar czf ../novastar-vx-pro-v${VERSION}.tgz novastar-vx-pro/)
-          ls -la novastar-vx-pro-v${VERSION}.tgz
+          TARBALL=$(ls novastar-vx-pro-*.tgz | head -1)
+          echo "path=$TARBALL" >> $GITHUB_OUTPUT
+          ls -la "$TARBALL"
       - name: Upload release asset
         uses: softprops/action-gh-release@v2
         with:
-          files: novastar-vx-pro-v*.tgz
+          files: ${{ steps.locate.outputs.path }}
           generate_release_notes: true

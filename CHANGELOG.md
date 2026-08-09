@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+- Switch to `@companion-module/tools@^2.7.2` for build and validation (standard bitfocus tooling)
+- `npm run check` runs `companion-module-check` (passes clean)
+- No functional changes vs 1.0.0
+
 ## 1.0.0
 - First stable release, submitted to the Bitfocus module store
 - Add `companion/HELP.md`

@@ -17,10 +17,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
+      - run: npm run check
       - run: npm run build
       - name: Verify build output
         run: |
           test -f pkg/main.js || (echo "pkg/main.js missing" && exit 1)
           test -f pkg/companion/manifest.json || (echo "pkg/companion/manifest.json missing" && exit 1)
+          test -f pkg/companion/HELP.md || (echo "pkg/companion/HELP.md missing" && exit 1)
           test -f pkg/package.json || (echo "pkg/package.json missing" && exit 1)
           echo "Build OK (main.js $(stat -c%s pkg/main.js) bytes)"

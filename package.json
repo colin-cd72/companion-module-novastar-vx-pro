@@ -1,6 +1,6 @@
 {
   "name": "companion-module-novastar-vx-pro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bitfocus Companion module for Novastar VX Pro series (VX400/600/1000/2000 Pro) — controls the device via its Unico HTTP API.",
   "main": "src/main.js",
   "type": "module",
@@ -29,16 +29,16 @@
     "video-processor"
   ],
   "scripts": {
-    "build": "node build.mjs",
-    "pack": "node build.mjs && node -e \"import('fs').then(fs=>{const{mkdirSync,rmSync,cpSync}=fs;rmSync('tmp',{recursive:true,force:true});mkdirSync('tmp/novastar-vx-pro',{recursive:true});cpSync('pkg/main.js','tmp/novastar-vx-pro/main.js');cpSync('pkg/companion','tmp/novastar-vx-pro/companion',{recursive:true});cpSync('pkg/package.json','tmp/novastar-vx-pro/package.json');import('child_process').then(cp=>cp.execSync('tar czf novastar-vx-pro.tgz -C tmp novastar-vx-pro',{stdio:'inherit'}))})\""
+    "check": "companion-module-check",
+    "build": "companion-module-build"
   },
   "dependencies": {
     "@companion-module/base": "^1.11.0"
   },
-  "devDependencies": {
-    "esbuild": "^0.28.2"
-  },
   "engines": {
     "node": "^18.12 || ^20.9 || ^22"
+  },
+  "devDependencies": {
+    "@companion-module/tools": "^2.7.2"
   }
 }

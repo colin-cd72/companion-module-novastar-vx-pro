@@ -3,7 +3,7 @@
   "name": "novastar-vx-pro",
   "shortname": "VX Pro",
   "description": "Novastar VX Pro series (VX400/600/1000/2000 Pro) via the Unico HTTP API",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "repository": "https://github.com/colin-cd72/companion-module-novastar-vx-pro",
   "bugs": "https://github.com/colin-cd72/companion-module-novastar-vx-pro/issues",
