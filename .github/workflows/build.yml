@@ -1,0 +1,26 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['18.x', '22.x']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build
+      - name: Verify build output
+        run: |
+          test -f pkg/main.js || (echo "pkg/main.js missing" && exit 1)
+          test -f pkg/companion/manifest.json || (echo "pkg/companion/manifest.json missing" && exit 1)
+          test -f pkg/package.json || (echo "pkg/package.json missing" && exit 1)
+          echo "Build OK (main.js $(stat -c%s pkg/main.js) bytes)"
