@@ -8,12 +8,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deford/companion-module-novastar-vx-pro.git"
+    "url": "https://github.com/colin-cd72/companion-module-novastar-vx-pro.git"
   },
   "bugs": {
-    "url": "https://github.com/deford/companion-module-novastar-vx-pro/issues"
+    "url": "https://github.com/colin-cd72/companion-module-novastar-vx-pro/issues"
   },
-  "homepage": "https://github.com/deford/companion-module-novastar-vx-pro#readme",
+  "homepage": "https://github.com/colin-cd72/companion-module-novastar-vx-pro#readme",
   "keywords": [
     "companion",
     "companion-module",

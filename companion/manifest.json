@@ -5,8 +5,8 @@
   "description": "Novastar VX Pro series (VX400/600/1000/2000 Pro) via the Unico HTTP API",
   "version": "0.6.0",
   "license": "MIT",
-  "repository": "https://github.com/deford/companion-module-novastar-vx-pro",
-  "bugs": "https://github.com/deford/companion-module-novastar-vx-pro/issues",
+  "repository": "https://github.com/colin-cd72/companion-module-novastar-vx-pro",
+  "bugs": "https://github.com/colin-cd72/companion-module-novastar-vx-pro/issues",
   "maintainers": [
     { "name": "deford", "email": "deford@gmail.com" }
   ],

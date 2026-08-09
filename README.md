@@ -46,7 +46,7 @@ Tested on **VX400 Pro** (firmware V1.3.0, Unico V2.2.B1). Likely works on **VX60
 
 This module isn't in the Bitfocus module store yet. To install manually:
 
-1. Download the latest `novastar-vx-pro-*.tgz` from the [Releases page](https://github.com/deford/companion-module-novastar-vx-pro/releases).
+1. Download the latest `novastar-vx-pro-*.tgz` from the [Releases page](https://github.com/colin-cd72/companion-module-novastar-vx-pro/releases).
 2. In Companion (v5.1+) go to **Modules** → **Import module package** → pick the tarball.
 3. Under **Connections**, click **+ Add connection** → search for `Novastar VX Pro` → add it.
 4. Set the **Device IP** field and Save. Preset list populates automatically.
