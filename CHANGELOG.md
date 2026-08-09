@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0
+- First stable release, submitted to the Bitfocus module store
+- Add `companion/HELP.md`
+- No functional changes vs 0.6.0
+
 ## 0.6.0
 - Add feedbacks: `FTB is active`, `Freeze is active`, `Preset is active` (button color reflects state)
 - New variables: `active_preset`, `brightness`

@@ -1,6 +1,6 @@
 {
   "name": "companion-module-novastar-vx-pro",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "description": "Bitfocus Companion module for Novastar VX Pro series (VX400/600/1000/2000 Pro) — controls the device via its Unico HTTP API.",
   "main": "src/main.js",
   "type": "module",
