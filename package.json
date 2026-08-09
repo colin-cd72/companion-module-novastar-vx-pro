@@ -1,0 +1,44 @@
+{
+  "name": "companion-module-novastar-vx-pro",
+  "version": "0.6.0",
+  "description": "Bitfocus Companion module for Novastar VX Pro series (VX400/600/1000/2000 Pro) — controls the device via its Unico HTTP API.",
+  "main": "src/main.js",
+  "type": "module",
+  "author": "deford <deford@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deford/companion-module-novastar-vx-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deford/companion-module-novastar-vx-pro/issues"
+  },
+  "homepage": "https://github.com/deford/companion-module-novastar-vx-pro#readme",
+  "keywords": [
+    "companion",
+    "companion-module",
+    "novastar",
+    "vx-pro",
+    "vx400-pro",
+    "vx600-pro",
+    "vx1000-pro",
+    "vx2000-pro",
+    "unico",
+    "pixelflow",
+    "led",
+    "video-processor"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "pack": "node build.mjs && node -e \"import('fs').then(fs=>{const{mkdirSync,rmSync,cpSync}=fs;rmSync('tmp',{recursive:true,force:true});mkdirSync('tmp/novastar-vx-pro',{recursive:true});cpSync('pkg/main.js','tmp/novastar-vx-pro/main.js');cpSync('pkg/companion','tmp/novastar-vx-pro/companion',{recursive:true});cpSync('pkg/package.json','tmp/novastar-vx-pro/package.json');import('child_process').then(cp=>cp.execSync('tar czf novastar-vx-pro.tgz -C tmp novastar-vx-pro',{stdio:'inherit'}))})\""
+  },
+  "dependencies": {
+    "@companion-module/base": "^1.11.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "engines": {
+    "node": "^18.12 || ^20.9 || ^22"
+  }
+}

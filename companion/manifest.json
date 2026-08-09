@@ -1,0 +1,24 @@
+{
+  "id": "novastar-vx-pro",
+  "name": "novastar-vx-pro",
+  "shortname": "VX Pro",
+  "description": "Novastar VX Pro series (VX400/600/1000/2000 Pro) via the Unico HTTP API",
+  "version": "0.6.0",
+  "license": "MIT",
+  "repository": "https://github.com/deford/companion-module-novastar-vx-pro",
+  "bugs": "https://github.com/deford/companion-module-novastar-vx-pro/issues",
+  "maintainers": [
+    { "name": "deford", "email": "deford@gmail.com" }
+  ],
+  "runtime": {
+    "type": "node22",
+    "api": "nodejs-ipc",
+    "apiVersion": "1.11.0",
+    "entrypoint": "src/main.js"
+  },
+  "manufacturer": "Novastar",
+  "products": ["VX400 Pro", "VX600 Pro", "VX1000 Pro", "VX2000 Pro"],
+  "keywords": ["video", "led", "processor", "novastar", "unico", "pixelflow"],
+  "legacyIds": [],
+  "isPrerelease": true
+}
